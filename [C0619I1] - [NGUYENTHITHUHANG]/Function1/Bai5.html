@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5</title>
+</head>
+<body>
+<script>
+
+    function checkStar() {
+        let star = [ 'Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe','Regulus'];
+        let equivalentStar = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major','Leo'];
+        let str = prompt("Input a string: ");
+        for (let i = 0 ; i < star.length; i++){
+            if (str === star[i]){
+                console.log(equivalentStar[i]);
+            }
+        }
+    }
+    checkStar();
+
+
+</script>
+</body>
+</html>
