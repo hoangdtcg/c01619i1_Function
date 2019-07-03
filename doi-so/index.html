@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <labe>Tăng giá trị đối số</labe>
+    <input type="number"
+           oninput="tangGiaTri(this.value)"
+           onchange="tangGiaTri(this.value)">
+</p>
+<p>Đối số: <span id="view"></span></p>
+<script>
+    function tangGiaTri(number) {
+        let doiso = parseInt(number);
+        document.getElementById("view").innerHTML = doiso + 1;
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Nhập bán kính</label>
+    <input type="number"
+    oninput="dientich(this.value), chuvi(this.value)"
+    onchange="dientich(this.value), chuvi(this.value)">
+</p>
+<p>
+    Kết quả diện tích hình tròn là: <span id="dientich"></span>
+</p>
+<p>
+    Kết quả chu vi hình tròn là: <span id="chuvi"></span>
+</p>
+<script>
+    const pi = 3.14;
+    function dientich(number) {
+        let dientich = parseInt(number);
+        document.getElementById("dientich"). innerHTML = (dientich * dientich * pi).toFixed(2);
+    }
+    function chuvi(number) {
+        let chuvi = parseInt(number);
+        document.getElementById("chuvi").innerHTML = (2 * chuvi * pi).toFixed(2);
+    }
+</script>
+</body>
+</html>

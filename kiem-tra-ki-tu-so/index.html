@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label for="text"></label><input id="text">
+    <button onclick="print()">Kiểm tra</button>
+</p>
+<div id="result"></div>
+<script>
+    let vaLue = document.getElementById("text");
+    function check(string) {
+        return isNaN(string);
+    }
+    function print() {
+        if (check(vaLue.value)) {
+            document.getElementById("result").innerHTML = "string không phải là số";
+        } else {
+
+            document.getElementById("result").innerHTML = "string là số";
+        }
+    }
+
+</script>
+</body>
+</html>

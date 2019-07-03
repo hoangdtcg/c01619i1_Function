@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Nhập số nguyên</label>
+    <input type="text" id="num">
+</p>
+<button onclick="addNumber(num)">Add Number</button>
+<button onclick="daoNguoc(arr)">Đảo Ngược</button>
+<p id="result">Số bạn vừa nhập là: <span id="viewNum"></span></p>
+<script>
+    let arr = [];
+    let x = 0;
+    let num = document.getElementById("num");
+
+    function addNumber(number) {
+        arr[x] = number.value;
+        x++;
+        document.getElementById("num").value = null;
+        document.getElementById("viewNum").innerHTML = arr;
+    }
+
+    function daoNguoc(array) {
+        let x = 0;
+        for (let i = 0; i < array.length; i++) {
+            array[i] = x;
+            x = array[i + 1];
+            array[i] = array[i + 1];
+            document.getElementById("result").innerHTML = array;
+        }
+    }
+
+</script>
+</body>
+</html>

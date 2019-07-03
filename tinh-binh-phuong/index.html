@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Bình phương số </label>
+    <input type="number"
+            oninput="calculate(this.value)"
+            onchange="calculate(this.value)">
+
+</p>
+<p>Kết quả: <span id="result"></span></p>
+<script>
+    function calculate(number) {
+        let result = parseInt(number);
+        document.getElementById("result").innerHTML = result * result;
+    }
+
+
+</script>
+</body>
+</html>

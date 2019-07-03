@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <label>Nhập số</label>
+    <input type="text" id="num">
+</p>
+<button onclick="print()">Kiểm tra</button>
+<p id="result"></p>
+<script>
+    let num = document.getElementById("num");
+
+    function check(number) {
+        return number > 0;
+
+    }
+    function print() {
+        if (check(num.value)) {
+            document.getElementById("result").innerHTML = "true";
+        } else {
+            document.getElementById("result").innerHTML = "false";
+        }
+    }
+</script>
+</body>
+</html>
