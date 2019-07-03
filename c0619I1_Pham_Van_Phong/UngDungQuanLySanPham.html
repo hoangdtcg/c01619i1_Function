@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="Ung_dung_quan_li_san_pham.css">
+</head>
+<body>
+<label> <strong>Add new product</strong></label>
+<div>
+    <input id="product" type="text" placeholder="New Product">
+    <button class="button" type="button" onclick="add_Product()">Add</button>
+</div>
+<br>
+<label> <strong>Display all product</strong></label>
+<div id="result"></div>
+<script>
+    let x = 0;
+    let array = Array();
+    let i;
+    let result = document.getElementById("result");
+
+    function add_Product() {
+        array[x] = document.getElementById("product").value;
+        x++;
+        document.getElementById("product").value = "";
+        display_Product();
+    }
+    //add_Product();
+    function display_Product() {
+        result.innerHTML = "";
+        for (i = 0; i < array.length; i++) {
+            result.innerHTML += "<input type='text' value='" + array[i] + "'>" +
+                "<button class='button' id='" + i + "' type='button' onclick='update_Product(this.id)'>Update</button>" +
+                "<button class='button' id='" + i + "' type='button' onclick='deleted_Product(this.id)'>Delete</button>" + "<br>";
+            console.log(array[i]);
+        }
+    }
+
+    function update_Product(id) {
+        let newValue = prompt("Nhap ten moi: ");
+        array[id] = newValue;
+        display_Product();
+        console.log(id);
+    }
+    function deleted_Product(id) {
+       array[id] ="";
+        display_Product();
+    }
+</script>
+</body>
+</html>
