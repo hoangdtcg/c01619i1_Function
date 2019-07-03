@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="inputText" type="text">
+<button onclick="print()">Kiểm tra</button>
+<p>
+    Kết quả: <span id="result"></span>
+</p>
+<script>
+    let english = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let vietnam = ['Ursa', ' Minor', ' Tarurus', ' Cygnus', ' Lyra', ' Aquila', ' Ursa', 'Major', 'Leo'];
+    let text = document.getElementById("inputText");
+    let vn;
+
+    function check() {
+        console.log(text.value);
+        for (let i = 0; i <= english.length; i++) {
+            if (text.value === english[i]) {
+                vn = vietnam[i];
+                console.log(vn);
+                return vietnam[i];
+            }
+        }
+        return false;
+    }
+
+    function print() {
+        if (check) {
+            document.getElementById("result").innerHTML = check();
+        } else {
+            document.getElementById("result").innerHTML = "Không tìm thấy";
+        }
+        console.log(check());
+    }
+</script>
+</body>
+</html>

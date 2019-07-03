@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let inPutNum = parseInt(prompt("Nhập số kiểm tra: "));
+
+   function checkSNT(number) {
+       if (number < 1){
+           return false
+       }
+       for (let i = 2; i <= Math.sqrt(number) ; i++) {
+           if (number % i == 0){
+               return false;
+           }
+       }
+       return true;
+   }
+   if (checkSNT(inPutNum)){
+       alert("Số " + inPutNum + " là số NT" );
+   }else {
+       alert("Số " + inPutNum + " không phải là số NT");
+   }
+</script>
+</body>
+</html>
